@@ -1,0 +1,19 @@
+<form action="/results" method="GET">
+	<input name="season" placeholder="Season" type="number">
+</form>
+
+<h1>
+	Search results!
+</h1>
+
+<ul>
+
+<% if(resBody){
+	resBody["Episodes"].forEach(episode => { %>
+	<li>
+		<%= episode["Title"] %>	
+	</li>	
+<% })} %>
+	
+</ul>
+	
